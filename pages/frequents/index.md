@@ -1,7 +1,7 @@
 ---
 type: posts
-title: Posts
+title: Frequents
 date: 2022-10-06
 ---
 
-# Posts
+# Frequents
