@@ -3,8 +3,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   const meta = {
     title: "kengru's blog",
-    description: 'A window into Kendry.',
-    image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
+    description: 'hablando del día a día.',
+    image:
+      'https://drive.google.com/file/d/1LXh9NcbSBB2zadHIhlxcMGlvmXXJ9T0v/view?usp=share_link'
   }
 
   return (
