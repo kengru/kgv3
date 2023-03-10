@@ -3,3 +3,9 @@ theme = 'hugo-theme-monochrome'
 
 baseURL = 'https://kengru.do/'
 languageCode = 'en-us'
+
+googleAnalytics = 'G-KN214PWPJQ'
+
+# Theme
+[params]
+footer = "2023 © Kendry Grullon."
