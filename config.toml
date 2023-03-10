@@ -1,0 +1,5 @@
+title = 'kengru'
+theme = 'hugo-theme-monochrome'
+
+baseURL = 'https://kengru.do/'
+languageCode = 'en-us'
