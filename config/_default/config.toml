@@ -6,6 +6,8 @@ languageCode = 'en-us'
 
 googleAnalytics = 'G-KN214PWPJQ'
 
+# Menu
+
 # Theme
 [params]
 footer = "2023 © Kendry Grullon."
