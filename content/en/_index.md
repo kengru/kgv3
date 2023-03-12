@@ -11,4 +11,4 @@ keywords:
   - programmer-friendly
 ---
 
-This is the demo of hugo-theme-monochrome.
+This is the demo of hugo-theme-monochromes.
