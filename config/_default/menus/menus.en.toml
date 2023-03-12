@@ -1,0 +1,5 @@
+# [[navbar]]
+#   identifier = "frequents"
+#   name = "Frequents"
+#   url = "/en/frequents/"
+#   weight = 1

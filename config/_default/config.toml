@@ -1,0 +1,19 @@
+title = 'kengru'
+theme = 'hugo-theme-monochrome'
+author = "kengru"
+
+baseURL = 'https://kengru.do/'
+languageCode = 'en'
+defaultContentLanguage = 'en'
+
+googleAnalytics = 'G-KN214PWPJQ'
+
+# Enabling
+enableEmoji = true
+enable_zooming_js = true
+
+# Menu
+
+# Theme
+[params]
+footer = "2023 © Kendry Grullon."
