@@ -1,4 +1,0 @@
----
-title: "Frequents"
-type: "postcard"
----

@@ -1,14 +1,11 @@
 ---
 type: "blank"
-description: "Demo site of hugo-theme-monochrome"
+description: "Front page of kengru.do"
 zooming_js: false
 keywords:
   - hugo
-  - hugo theme
-  - hugo theme monochrome
-  - clean
-  - responsive
-  - programmer-friendly
+  - kengru
+  - developer
 ---
 
-This is the demo of hugo-theme-monochromes.
+.
