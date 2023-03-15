@@ -1,5 +1,5 @@
-# [[navbar]]
-#   identifier = "frequents"
-#   name = "Frequents"
-#   url = "/en/frequents/"
-#   weight = 1
+[[navbar]]
+  identifier = "devlogs"
+  name = "Devlogs"
+  url = "/devlogs/"
+  weight = 3

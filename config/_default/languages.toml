@@ -2,7 +2,7 @@
 contentDir = "content/en"
 languageName = "English"
 languageCode = "en"
-weight = 1
+weight = 2
 
 [es]
 contentDir = "content/es"

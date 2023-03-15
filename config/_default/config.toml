@@ -1,6 +1,6 @@
 title = 'kengru'
 theme = 'hugo-theme-monochrome'
-author = "kengru"
+author = "Kendry Grullon"
 
 baseURL = 'https://kengru.do/'
 languageCode = 'en'
@@ -12,8 +12,10 @@ googleAnalytics = 'G-KN214PWPJQ'
 enableEmoji = true
 enable_zooming_js = true
 
-# Menu
-
 # Theme
 [params]
 footer = "2023 © Kendry Grullon."
+enable_site_search = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
