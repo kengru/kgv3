@@ -16,7 +16,9 @@ Trying to put my thoughts into words and my dreams into fruition.
 
 Contact me at: kengrullon@gmail.com
 
-- [Twitter](https://twitter.com/kxngru)
-- [Github](https://github.com/kengru)
-- [LinkedIn](https://www.linkedin.com/in/kengru/)
-- [Instagram](https://instagram.com/kengru)
+{{< icon-group >}}
+{{< icon name="github" link="https://github.com/kengru" >}}  
+{{< icon name="twitter" link="https://twitter.com/kxngru" >}}
+{{< icon name="linkedin" link="https://www.linkedin.com/in/kengru/" >}}
+{{< icon name="instagram" link="https://instagram.com/kengru" >}}
+{{< /icon-group >}}
