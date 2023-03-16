@@ -1,5 +1,10 @@
 [[navbar]]
+  identifier = "devlogs"
+  name = "Devlogs"
+  url = "/devlogs/"
+  weight = 1
+[[navbar]]
   identifier = "frequents"
   name = "Frequentes"
   url = "/es/frequents/"
-  weight = 1
+  weight = 2
