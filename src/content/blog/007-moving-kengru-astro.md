@@ -1,7 +1,7 @@
 ---
 author: Kendry
 pubDatetime: 2023-11-21T15:22:00Z
-title: Moving kengru.do to Atro
+title: Moving kengru.do to Astro
 postSlug: moving-kengru-to-astro
 featured: true
 draft: false
@@ -10,153 +10,40 @@ tags:
 description: My takeways, why and how I moved to Astro.
 ---
 
-Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
+## Astro
 
-## Table of contents
+[Astro](https://astro.build/) is a web framework that's perfect for blogs and content
+-focused sites.
+There are a lot of themes made for Astro websites and it makes picking and choosing
+things you would like on a page really easy without overcomplicating on your
+website when there is no need to.
 
-## Frontmatter
+## Why
 
-Frontmatter is the main place to store some important information about the blog post (article). Frontmatter lies at the top of the article and is written in YAML format. Read more about frontmatter and its usage in [astro documentation](https://docs.astro.build/en/guides/markdown-content/).
+This website has been through 3 iterations (hence the name of the [repo](https://github.com/kengru/kgv3)) the first one was made completly out of scratch while I was giving my first
+steps into creating small apps to learn React.
 
-Here is the list of frontmatter property for each post.
+The second one was done with [Hugo](https://gohugo.io/) which was great since Hugo
+is a framework just like Astro just a litle bit more different than what I'm used to
+see from an SSR framework. It has very good themes and they are very complete in terms of
+accessibility and internalization.
 
-| Property           | Description                                                                     | Remark                                        |
-| ------------------ | ------------------------------------------------------------------------------- | --------------------------------------------- |
-| **_title_**        | Title of the post. (h1)                                                         | required<sup>\*</sup>                         |
-| **_description_**  | Description of the post. Used in post excerpt and site description of the post. | required<sup>\*</sup>                         |
-| **_pubDatetime_**  | Published datetime in ISO 8601 format.                                          | required<sup>\*</sup>                         |
-| **_author_**       | Author of the post.                                                             | default = SITE.author                         |
-| **_postSlug_**     | Slug for the post. Will automatically be slugified.                             | default = slugified title                     |
-| **_featured_**     | Whether or not display this post in featured section of home page               | default = false                               |
-| **_draft_**        | Mark this post 'unpublished'.                                                   | default = false                               |
-| **_tags_**         | Related keywords for this post. Written in array yaml format.                   | default = others                              |
-| **_ogImage_**      | OG image of the post. Useful for social media sharing and SEO.                  | default = SITE.ogImage or generated OG image  |
-| **_canonicalURL_** | Canonical URL (absolute), in case the article already exists on other source.   | default = `Astro.site` + `Astro.url.pathname` |
+I decided to go with Astro since its themes were much to my liking, it's [blazingly fast](https://astro.build/blog/2023-web-framework-performance-report/), and in my opinion it has
+better web fundamentals built into it.
 
-Only `title`, `description` and `pubDatetime` fields in frontmatter must be specified.
+It was a really straightforward process where I just created a new branch, deleted everything
+and ran `yarn create astro --template ${template}` and started changing all of the configuration
+files, then moved the old post I had into the content folder and it worked like a charm!
 
-Title and description (excerpt) are important for search engine optimization (SEO) and thus AstroPaper encourages to include these in blog posts.
+## Takeway
 
-`slug` is the unique identifier of the url. Thus, `slug` must be unique and different from other posts. The whitespace of `slug` needs to be separated with `-` or `_` but `-` is recommended. However, even if you don't write the correct slug, AstroPaper will automatically slugify your incorrect slug. If slug is not specified, the slugified title of the post will be used as slug.
+Astro is pretty good but what I like the most about it is the ability to use templates and
+focus in the part that is really important when having a blog which is writing. The template
+I chose has everything needed related to responsiveness and accesibility which makes my
+job easier.
 
-If you omit `tags` in a blog post (in other words, if no tag is specified), the default tag `others` will be used as a tag for that post. You can set the default tag in the `/src/content/config.ts` file.
+Hopefully this is the last time I have to change this site at least this drastic. I'm going
+to be focusing on making this look nice and any other feature I will need in the future, I
+will make them myself in top of this structure.
 
-```ts
-// src/content/config.ts
-export const blogSchema = z.object({
-  // ---
-  draft: z.boolean().optional(),
-  tags: z.array(z.string()).default(["others"]), // replace "others" with whatever you want
-  // ---
-});
-```
-
-### Sample Frontmatter
-
-Here is the sample frontmatter for a post.
-
-```yaml
-# src/content/blog/sample-post.md
----
-title: The title of the post
-author: your name
-pubDatetime: 2022-09-21T05:17:19Z
-postSlug: the-title-of-the-post
-featured: true
-draft: false
-tags:
-  - some
-  - example
-  - tags
-ogImage: ""
-description: This is the example description of the example post.
-canonicalURL: https://example.org/my-article-was-already-posted-here
----
-```
-
-## Adding table of contents
-
-By default, a post (article) does not include any table of contents (toc). To include toc, you have to specify it in a specific way.
-
-Write `Table of contents` in h2 format (## in markdown) and place it where you want it to be appeared on the post.
-
-For instance, if you want to place your table of contents just under the intro paragraph (like I usually do), you can do that in the following way.
-
-```md
----
-# some frontmatter
----
-
-Here are some recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
-
-## Table of contents
-
-<!-- the rest of the post -->
-```
-
-## Headings
-
-There's one thing to note about headings. The AstroPaper blog posts use title (title in the frontmatter) as the main heading of the post. Therefore, the rest of the heading in the post should be using h2 \~ h6.
-
-This rule is not mandatory, but highly recommended for visual, accessibility and SEO purposes.
-
-## Storing Images for Blog Content
-
-Here are two methods for storing images and displaying them inside a markdown file.
-
-> Note! If it's a requirement to style optimized images in markdown you should [use MDX](https://docs.astro.build/en/guides/images/#images-in-mdx-files).
-
-### Inside `src/assets/` directory (recommended)
-
-You can store images inside `src/assets/` directory. These images will be automatically optimized by Astro through [Image Service API](https://docs.astro.build/en/reference/image-service-reference/).
-
-You can use relative path or alias path (`@assets/`) to serve these images.
-
-Example: Suppose you want to display `example.jpg` whose path is `/src/assets/images/example.jpg`.
-
-```md
-![something](@assets/images/example.jpg)
-
-<!-- OR -->
-
-![something](../../assets/images/example.jpg)
-
-<!-- Using img tag or Image component won't work ❌ -->
-<img src="@assets/images/example.jpg" alt="something">
-<!-- ^^ This is wrong -->
-```
-
-> Technically, you can store images inside any directory under `src`. In here, `src/assets` is just a recommendation.
-
-### Inside `public` directory
-
-You can store images inside the `public` directory. Keep in mind that images stored in the `public` directory remain untouched by Astro, meaning they will be unoptimized and you need to handle image optimization by yourself.
-
-For these images, you should use an absolute path; and these images can be displayed using [markdown annotation](https://www.markdownguide.org/basic-syntax/#images-1) or [HTML img tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img).
-
-Example: Assume `example.jpg` is located at `/public/assets/images/example.jpg`.
-
-```md
-![something](/assets/images/example.jpg)
-
-<!-- OR -->
-
-<img src="/assets/images/example.jpg" alt="something">
-```
-
-## Bonus
-
-### Image compression
-
-When you put images in the blog post (especially for images under `public` directory), it is recommended that the image is compressed. This will affect the overall performance of the website.
-
-My recommendation for image compression sites.
-
-- [TinyPng](https://tinypng.com/)
-- [TinyJPG](https://tinyjpg.com/)
-
-### OG Image
-
-The default OG image will be placed if a post does not specify the OG image. Though not required, OG image related to the post should be specify in the frontmatter. The recommended size for OG image is **_1200 X 640_** px.
-
-> Since AstroPaper v1.4.0, OG images will be generated automatically if not specified. Check out [the announcement](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/).
+Thank you for reading :)!
