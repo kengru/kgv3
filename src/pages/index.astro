@@ -45,7 +45,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           href="https://x-team.com/"
           target="_blank"
           rel="noreferrer noopener">X-Team</a
-        > and I write about web development, generative art and other things.
+        > and I write about web development, generative art and other things. I
+        believe there is no wasted time in learning to do things better.
       </p>
       {
         // only display if at least one social link is enabled
@@ -64,18 +65,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <h2>Recent Posts</h2>
       <ul>
         {
-          sortedPosts
-            .filter(({ data }) => !data.featured)
-            .map(
-              ({ data }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${slugify(data)}`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )
+          sortedPosts.map(
+            ({ data }, index) =>
+              index < 4 && (
+                <Card
+                  href={`/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              )
+          )
         }
       </ul>
       <div class="all-posts-btn-wrapper">
