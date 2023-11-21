@@ -5,12 +5,12 @@ export const SITE: Site = {
   author: "Kendry Grullón",
   desc: "A software developer trying to be an engineer.",
   title: "kengru",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "keng-og.jpeg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 6,
 };
 
-export const LOCALE = ["en-US"]; // set to [] to use the environment default
+export const LOCALE = ["en-EN"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {
   enable: false,
