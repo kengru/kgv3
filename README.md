@@ -1,10 +1,12 @@
+# kengru.do
 
-# KGV3
+Repo of my personal page, trying to convert it into a tech blog that may help someone in the future.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b12603d6-7f92-49a2-89fb-f30c8765c863/deploy-status)](https://app.netlify.com/sites/majestic-marzipan-0f677f/deploys)
+It's made with [Astro](https://astro.build/) and React.
 
-Blog.
+---
 
-### Saved values
+Thanks to [Sat Naing](https://satnaing.dev) and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors) for their awesome template!
 
-- Snippets in [carbon](https://carbon.now.sh/) use this background: `6D6E6E`.
+Favicon license:
+https://creativecommons.org/licenses/by/4.0/
