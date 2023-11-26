@@ -48,7 +48,6 @@ type SingleItem = {
   url: string; // URL of the rss site.
   name: string; // Name for the user to recognize it.
   image: string;
-  type: "PODCAST" | "BLOG" | "NEWS";
 };
 ```
 
