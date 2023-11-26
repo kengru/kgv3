@@ -6,7 +6,8 @@ postSlug: moving-kengru-to-astro
 featured: true
 draft: false
 tags:
-  - docs
+  - astro
+  - migration
 description: My takeways, why and how I moved to Astro.
 ---
 
