@@ -1,6 +1,6 @@
 ---
 author: Kendry
-pubDatetime: 2023-11-24T15:22:00Z
+pubDatetime: 2023-11-26T15:22:00Z
 title: Feeder - a simple rss reader
 postSlug: feeder-rss-reader
 featured: true
@@ -116,5 +116,6 @@ And the code is at: https://github.com/odin-software/feeder
 - Have it so that people can log in and have their own list.
 - Divide posts into types for easier display on things like podcasts.
 - Have a list of popular blogs that could be added to a user by just clicking something like a `follow` button.
+- Add a dark mode.
 
 Thank you for reading!
